@@ -94,7 +94,7 @@ void CheckAllButtons(void) {
 void ReadLeverControls(void) {
     l1 = analogRead(3); //Pin A3
     l1 = map(l1,minL1,maxL1,1023,0);
-    Joystick.setZAxis(l1);
+    Joystick.setRxAxis(l1);
   
     l2 = analogRead(2); //A2
     l2 = map(l2,minL2,maxL2,1023,0);
@@ -102,15 +102,15 @@ void ReadLeverControls(void) {
 
     l3 = analogRead(1); //A1
     l3 = map(l3,minL3,maxL5,1023,0);
-    Joystick.setRzAxis(l3);
+    Joystick.setZAxis(l3);
 
     l4 = analogRead(0); //A0
     l4 = map(l4,minL4,maxL4,1023,0);
-    Joystick.setThrottle(l4);
+    Joystick.setRzAxis(l4);
 
     l5 = analogRead(10); //A10
     l5 = map(l5,minL5,maxL5,1023,0);
-    Joystick.setRxAxis(l5);
+    Joystick.setThrottle(l5);
 }
 
 void ReadJoystick(void) {
